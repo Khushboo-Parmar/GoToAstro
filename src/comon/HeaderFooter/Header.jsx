@@ -2,13 +2,15 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import style from "../../utils/css/comoncss/style";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from "@react-navigation/native";
 export default function Header({top}){
+  const navigation = useNavigation()
     return(
         <>
          <View style={{ height: responsiveHeight(35),backgroundColor:'#fff4dd',paddingVertical: responsiveWidth(8), paddingHorizontal: responsiveWidth(5), position: 'relative' }}>
   <View style={{flexDirection:'row',justifyContent:'space-between'}}>
     <View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>{navigation.openDrawer()}}> 
       <Icon color='#78411b' size={16} name="bars"></Icon>
       </TouchableOpacity>
     </View>
