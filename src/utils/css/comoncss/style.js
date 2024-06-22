@@ -2,16 +2,25 @@ import { StyleSheet } from 'react-native';
 
 const style = StyleSheet.create({
     comoncolor: {
-        color: '#3b2c59'
+        color: '#1761e2'
+    },
+    comoncolor2: {
+        color: '#ea871e'
     },
     bgcomoncolor: {
-        backgroundColor: '#3b2c59'
+        backgroundColor: '#1761e2'
     },
-    lightcolor: {
-        color: '#6c757d'
+    bgcomoncolor2: {
+        backgroundColor: '#ea871e'
+    },
+    black: {
+        color: 'black'
     },
     white: {
         color: 'white'
+    },
+    bgwhite:{
+        backgroundColor:'white'
     }
 });
 
