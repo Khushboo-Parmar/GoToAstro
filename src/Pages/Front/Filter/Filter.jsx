@@ -9,13 +9,14 @@ import AstroReport from "../../../comon/Cards/AstroReportCard";
 import Search from "../../../comon/Filter/SearchFilter";
 import Main from "../Puja/Main";
 import PujaCard from "../../../comon/Cards/PujaCard";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Filter(props,{navigation}) {
-    // props?.route?.params?.name
+export default function Filter(props) {
+    const navigation = useNavigation()
     return (
         <>
             <Header top={<Text>Find &amp; Talk {'\n'}To Astrologers</Text>} />
-            
+
             <ScrollView style={[style.bgwhite, {
                 paddingVertical: responsiveWidth(5),
                 height: '100%',
@@ -23,18 +24,19 @@ export default function Filter(props,{navigation}) {
             }]}>
                 <Addas navigation={navigation} />
 
-<Search />
+                <Search />
 
 
-<View style={{marginVertical:responsiveHeight(2.5)}}>
+                <View style={{ marginVertical: responsiveHeight(2.5) }}>
 
 
-{props?.route?.params?.name === 'TALK TO ASTROLOGER'
-?<AstroCard navigation={navigation} />:props?.route?.params?.name === 'ASTRO REPORTS'?<AstroReport />:props?.route?.params?.name === 'PUJA' ? <PujaCard navigation={navigation} />:<StoreCard navigation={navigation} /> }
+                    {props?.route?.params?.name === 'TALK TO ASTROLOGER'
+                        ? <AstroCard navigation={navigation} /> : props?.route?.params?.name === 'ASTRO REPORTS' ? <AstroReport navigation={navigation} /> : props?.route?.params?.name === 'PUJA' ? <PujaCard navigation={navigation} /> : <StoreCard navigation={navigation} />}
 
 
 
-</View>
+
+                </View>
             </ScrollView>
         </>
     )

@@ -1,12 +1,11 @@
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
-import img from '../../../assets/images/product.webp';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Dropdown } from "react-native-element-dropdown";
 import DateTimePicker from "react-native-ui-datepicker";
 import { useState } from "react";
 import style from "../../utils/css/comoncss/style";
-import InfoCard from "../../comon/info/infoCard";
+import InfoCardTwo from "../../comon/info/infoCard";
 
 
 
@@ -24,7 +23,7 @@ export default function Detail(){
         <>
 
                 <View style={{alignItems:'center'}}>
-                <Image source={img} style={{height:responsiveHeight(30)}} />
+                <Image source={{uri:'https://d2vvtb6c5o2opz.cloudfront.net/epooja/1660048923.webp'}} style={{height:responsiveHeight(30),width:'100%'}} />
               </View>
        <ScrollView style={{       paddingVertical: responsiveWidth(5),
                     height: '100%',
@@ -123,8 +122,9 @@ export default function Detail(){
 {showdate?
           <DateTimePicker
           mode="range"
+          calendarTextStyle={{color:'grey'}}
         />
-:<Text style={{fontWeight:'bold',paddingHorizontal:responsiveWidth(5)}}>Desired Date</Text>}
+:<Text style={{fontWeight:'bold',paddingHorizontal:responsiveWidth(5),color:'grey'}}>Desired Date</Text>}
           </TouchableOpacity>
           </View>
 
@@ -132,7 +132,7 @@ export default function Detail(){
                     <View style={{marginVertical:responsiveHeight(2),gap:10}}>
             <Text style={{color:'black',fontWeight:'bold'}}>Select Addons : </Text>
             <View style={{ width:responsiveWidth(40), gap:20,marginVertical:responsiveHeight(2),borderWidth:1,borderColor:'grey',padding:responsiveWidth(5),borderRadius:5}}>
-            <Image source={img} style={{height:responsiveHeight(10),width:responsiveWidth(30)}} />
+            <Image source={{uri:'https://d2vvtb6c5o2opz.cloudfront.net/epooja/1649232939.webp'}} style={{height:responsiveHeight(10),width:responsiveWidth(30)}} />
             <Text style={{color:'black',textAlign:'center',fontSize:responsiveFontSize(1.6)}}>1 Brahamin Bhojan</Text>
             <Text style={[style.comoncolor2,{textAlign:'center',fontSize:responsiveFontSize(1.4)}]}>+ Rs.500</Text>
      <View style={{alignItems:'center'}}>
@@ -153,7 +153,7 @@ export default function Detail(){
         </View>
 
 
-        <InfoCard />
+        <InfoCardTwo tabs={tabs} />
 </View>
 
 

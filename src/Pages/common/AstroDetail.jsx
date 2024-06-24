@@ -1,13 +1,14 @@
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
-import InfoCard from "../../comon/info/infoCard";
 import img from '../../../assets/images/product.webp';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import style from "../../utils/css/comoncss/style";
 import StarRating from "react-native-star-rating-widget";
+import InfoCardTwo from "../../comon/info/infoCard";
 
 
 export default function AstroDetail(){
+    const tabs = ['Information', 'Benefits'];
     return(
         <>
    
@@ -123,7 +124,7 @@ export default function AstroDetail(){
                         </TouchableOpacity>
                     </View>
 
-        <InfoCard />
+        <InfoCardTwo tabs={tabs} />
 </View>
        </ScrollView>
         </>

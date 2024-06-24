@@ -4,10 +4,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 
 export default function StoreCard({ navigation }) {
-    const [like,setlike] =useState(false)
+    const [like,setLike] =useState(false)
   return (
 <View style={{ marginBottom: responsiveHeight(2), paddingVertical: responsiveHeight(2), flexDirection: 'row', flexWrap: 'wrap', gap: 10 }}>
-      <TouchableOpacity onPress={() => navigation.navigate(nav ? nav : 'SubCategory')} style={{
+      <TouchableOpacity onPress={()=>navigation.navigate('StoreDetail')}  style={{
         backgroundColor: 'white',
         shadowColor: '#ea871e',
         width: '48%',
@@ -24,13 +24,15 @@ export default function StoreCard({ navigation }) {
 
 
         <View style={{zIndex:999, position: 'absolute', top: responsiveHeight(2), right: responsiveWidth(2), gap: 10 }}>
-        <TouchableOpacity onPress={()=>setlike(!like)} style={{
-            backgroundColor: like ? 'white':'#ea871e',
+        <TouchableOpacity onPress={() => setLike(!like)} style={{
+            backgroundColor: like ? 'white' : '#ea871e',
             padding: responsiveWidth(2),
             borderRadius: 50,
-            justifyContent:'center',height:responsiveHeight(3.8)
+            justifyContent: 'center',
+            height: responsiveHeight(3.8),
+            borderWidth:1,borderColor:'#ea871e'
           }}>
-            <Icon name="heart" size={responsiveFontSize(1.5)} color={like ? 'red':'white'} />
+            <Icon name="heart" size={responsiveFontSize(1.5)} color={like ? 'red' : 'white'} />
           </TouchableOpacity>
           <TouchableOpacity style={{
             backgroundColor: '#ea871e',

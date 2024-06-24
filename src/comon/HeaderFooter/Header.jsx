@@ -17,7 +17,10 @@ export default function Header({top}){
     <View><Icon color='#78411b' size={16} name="user"></Icon></View>
   </View>
   
+  <View style={{width:'70%'}}>
   <Text style={[style.black, {marginTop:responsiveHeight(5), color:'#78411b', fontWeight: 'bold', fontSize: responsiveFontSize(3.5) }]}>{top}</Text>
+  </View>
+  
   <Image
     source={require('../../../assets/images/he.png')}
     style={{ position: 'absolute', bottom: -responsiveWidth(32), 

@@ -10,7 +10,7 @@ export default function SubCategory({navigation}){
         <>
         <Header top={<>
         <Text>Gemstone{'\n'}</Text>
-        <Text style={{fontSize:responsiveFontSize(1.5)}}>gotoastro provides all types of gemstone. It is online showcase where you can choose gemstone as per your choice and the same piece will be delivered to you. All gemstone are natural, original, lab certified and energized. The wearing method is sent along with the gemstone.</Text>
+        <Text style={{fontSize:responsiveFontSize(1.2)}}>gotoastro provides all types of gemstone. It is online showcase where you can choose gemstone as per your choice and the same piece will be delivered to you. All gemstone are natural, original, lab certified and energized. The wearing method is sent along with the gemstone.</Text>
         </>} />
 
 

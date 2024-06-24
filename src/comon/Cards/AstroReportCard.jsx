@@ -4,11 +4,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 import style from '../../utils/css/comoncss/style';
 
-export default function AstroReport() {
+export default function AstroReport({navigation}) {
     return (
         <>
 <View style={{ marginBottom: responsiveHeight(2), paddingVertical: responsiveHeight(2), flexDirection: 'row', flexWrap: 'wrap', gap: 10 }}>
-      <TouchableOpacity onPress={() => navigation.navigate(nav ? nav : 'SubCategory')} style={{
+      <TouchableOpacity onPress={() => navigation.navigate('ReportDetail')} style={{
         backgroundColor: 'white',
         shadowColor: '#ea871e',
         width: '48%',
@@ -34,7 +34,7 @@ export default function AstroReport() {
 
 
       <TouchableOpacity
-        onPress={() => navigation.navigate(nav ? nav : 'SubCategory')}
+        onPress={() => navigation.navigate('ReportDetail')}
         style={{
           backgroundColor: 'white',
           shadowColor: '#ea871e',
@@ -68,7 +68,7 @@ export default function AstroReport() {
 
         <Image
           style={{ width: '100%', height: responsiveHeight(13) }}
-          source={{ uri: 'https://d2vvtb6c5o2opz.cloudfront.net/reports/1686226943.webp' }}
+          source={{ uri: 'https://d2vvtb6c5o2opz.cloudfront.net/reports/1686227025.webp' }}
         />
         <Text style={{ textAlign: 'center', color: 'black', fontWeight: 'bold', fontSize: responsiveFontSize(1.4) }}>
           Gemstone-Rudraksha Recommendation Report

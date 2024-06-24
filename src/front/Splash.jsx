@@ -56,7 +56,7 @@ export default function SplashScreen({navigation}) {
                     </View>
 
                     <View style={{ alignItems: 'center', marginVertical: responsiveHeight(5) }}>
-                        <TouchableOpacity onPress={()=>navigation.navigate('Filter')} style={{
+                        <TouchableOpacity onPress={()=>navigation.navigate('Home')} style={{
                             borderWidth: 1,
                             borderColor: 'black',
                             borderRadius: 10,
