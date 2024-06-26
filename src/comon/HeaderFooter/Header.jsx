@@ -14,7 +14,7 @@ export default function Header({top}){
       <Icon color='#78411b' size={16} name="bars"></Icon>
       </TouchableOpacity>
     </View>
-    <View><Icon color='#78411b' size={16} name="user"></Icon></View>
+    <TouchableOpacity onPress={()=>{navigation.navigate('ProfileSidebar')}} ><Icon color='#78411b' size={16} name="user"></Icon></TouchableOpacity>
   </View>
   
   <View style={{width:'70%'}}>

@@ -83,31 +83,31 @@ const Home = () => {
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.services}>
 
                     <View style={{ display: 'flex', alignItems: 'center' }}>
-                        <TouchableOpacity onPress={()=>navigation.navigate('Store',{name:'STORE'})} style={styles.serviceItem}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Store', { name: 'STORE' })} style={styles.serviceItem}>
                             <Image source={{ uri: images.astro }} style={styles.serviceImage} />
                         </TouchableOpacity>
                         <Text style={styles.serviceText}>STORE</Text>
-                    </View> 
+                    </View>
                     <View style={{ display: 'flex', alignItems: 'center' }}>
-                        <TouchableOpacity onPress={()=>navigation.navigate('Puja',{name:'TALK TO ASTROLOGER'})} style={styles.serviceItem}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Puja', { name: 'TALK TO ASTROLOGER' })} style={styles.serviceItem}>
                             <Image source={{ uri: images.puja }} style={styles.serviceImage} />
                         </TouchableOpacity>
                         <Text style={styles.serviceText}>POOJA</Text>
                     </View>
                     <View style={{ display: 'flex', alignItems: 'center' }} >
-                        <TouchableOpacity style={styles.serviceItem} onPress={()=>navigation.navigate('Filter',{name:'ASTRO REPORTS'})}>
+                        <TouchableOpacity style={styles.serviceItem} onPress={() => navigation.navigate('Filter', { name: 'ASTRO REPORTS' })}>
                             <Image source={{ uri: images.reports }} style={styles.serviceImage} />
                         </TouchableOpacity>
                         <Text style={styles.serviceText}>REPORTS</Text>
                     </View>
                     <View style={{ display: 'flex', alignItems: 'center' }} >
-                        <TouchableOpacity style={styles.serviceItem} onPress={()=>navigation.navigate('Magzine',{name:'TALK TO ASTROLOGER'})}>
+                        <TouchableOpacity style={styles.serviceItem} onPress={() => navigation.navigate('Magzine', { name: 'TALK TO ASTROLOGER' })}>
                             <Image source={{ uri: images.magazine }} style={styles.serviceImage} />
                         </TouchableOpacity>
                         <Text style={styles.serviceText}>Magazine</Text>
                     </View>
                     <View style={{ display: 'flex', alignItems: 'center' }} >
-                        <TouchableOpacity style={styles.serviceItem} onPress={()=>navigation.navigate('Blog',{name:'TALK TO ASTROLOGER'})}>
+                        <TouchableOpacity style={styles.serviceItem} onPress={() => navigation.navigate('Blog', { name: 'TALK TO ASTROLOGER' })}>
                             <Image source={{ uri: images.blog }} style={styles.serviceImage} />
 
                         </TouchableOpacity>
@@ -117,17 +117,17 @@ const Home = () => {
                 </ScrollView>
 
 
-              <View style={{marginVertical:responsiveHeight(3)}}>
-              <Corosel />
-              </View>
+                <View style={{ marginVertical: responsiveHeight(3) }}>
+                    <Corosel />
+                </View>
 
                 <View style={styles.consultation}>
                     <View style={styles.consultationTextContainer}>
                         <Text style={styles.consultationText}>Need a consultation?</Text>
-                        <TouchableOpacity onPress={()=>navigation.navigate('Filter',{name:'TALK TO ASTROLOGER'})} style={styles.consultationButton}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Filter', { name: 'TALK TO ASTROLOGER' })} style={styles.consultationButton}>
                             <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', gap: 2 }}>
                                 <Ioni name="planet" size={responsiveFontSize(3)} color={theme.secondaryColor} />
-                                <Text style={[style.black,{fontSize:responsiveFontSize(1.4)}]}>Talk to Astrologers</Text>
+                                <Text style={[style.black, { fontSize: responsiveFontSize(1.4) }]}>Talk to Astrologers</Text>
                             </View>
 
                         </TouchableOpacity>
@@ -135,7 +135,7 @@ const Home = () => {
                     <Image source={{ uri: 'https://d2vvtb6c5o2opz.cloudfront.net/epooja/1649232939.webp' }} style={styles.ganeshaImage} />
                 </View>
 
-                <View style={{ gap: responsiveHeight(1) ,marginVertical:responsiveHeight(3) }}>
+                <View style={{ gap: responsiveHeight(1), marginVertical: responsiveHeight(3) }}>
                     <Text style={[style.comoncolor2, { textAlign: 'center', fontSize: responsiveFontSize(2.5), fontWeight: 'bold' }]}>Astrology Blog</Text>
                     <Text style={{ textAlign: 'center', color: 'black', fontWeight: '300', fontSize: responsiveFontSize(1.3), width: '100%' }}>
                         Read Astrology, Vastu and Religious Articles, Celebrity Horoscope Analysis, Articles on Festivals, Brief Biographies of Saints, Regular Series etc.
@@ -148,91 +148,91 @@ const Home = () => {
                     </ScrollView>
                 </View>
 
-                
-               
-               <View style={{ gap: responsiveHeight(1),marginVertical:responsiveHeight(2) }}>
-               <Text style={[style.comoncolor2, { textAlign: 'center', fontSize: responsiveFontSize(2.5), fontWeight: 'bold' }]}>Store</Text>
+
+
+                <View style={{ gap: responsiveHeight(1), marginVertical: responsiveHeight(2) }}>
+                    <Text style={[style.comoncolor2, { textAlign: 'center', fontSize: responsiveFontSize(2.5), fontWeight: 'bold' }]}>Store</Text>
                     <Text style={{ textAlign: 'center', color: 'black', fontWeight: '300', fontSize: responsiveFontSize(1.3), width: '100%' }}>
                         Read Astrology, Vastu and Religious Articles, Celebrity Horoscope Analysis, Articles on Festivals, Brief Biographies of Saints, Regular Series etc.
                     </Text>
-               <CategryCard navigation={navigation} image={'https://5.imimg.com/data5/QD/BD/MY-3456141/astrology-gemstones-500x500.png'} name={'Gemstone'} />
-               </View>
+                    <CategryCard navigation={navigation} image={'https://5.imimg.com/data5/QD/BD/MY-3456141/astrology-gemstones-500x500.png'} name={'Gemstone'} />
+                </View>
 
-<TouchableOpacity onPress={()=>navigation.navigate('Magzine')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Magzine')}>
 
-<ImageBackground source={{uri:'https://gotoastro.com/front-assets/images/e-Magazine.jpg'}} style={{ gap: responsiveHeight(1),marginVertical:responsiveHeight(2)  }}>
-               
-               <View style={{flexDirection:'row',alignItems:'center',paddingHorizontal:responsiveWidth(5),paddingVertical:responsiveHeight(3)}}>
-               <View style={{width:'50%'}}>
-                 <Text style={[style.white, { textAlign: 'left', fontSize: responsiveFontSize(2.5), fontWeight: 'bold' }]}>Magazine</Text>
-                      <Text style={{marginTop:responsiveHeight(2), textAlign: 'left', color: 'white', fontWeight: '300', fontSize: responsiveFontSize(1.3), width: '100%' }}>
-                          Read Astrology, Vastu and Religious Articles, Celebrity Horoscope Analysis, Articles on Festivals, Brief Biographies of Saints, Regular Series etc.
-                      </Text>
-                 </View>
-  
-     
-                 <View style={{ width: '48%', marginBottom: responsiveHeight(2), position: 'relative' }}>
-        <Image
-          style={{ width: '100%', height: responsiveHeight(25), resizeMode: 'contain' }}
-          source={{ uri: 'https://d2vvtb6c5o2opz.cloudfront.net/magazine/1698047887.webp' }}
-        />
-        <View style={{
-          position: 'absolute',
-          bottom: 10,
-          left: '45%',
-          transform: [{ translateX: -24 }], // Adjust based on icon size
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          width: 48, // Adjust based on icon size and spacing
-          gap:10
-        }}>
-           <TouchableOpacity style={{
-              backgroundColor:'white',
-              padding: responsiveWidth(2),
-              borderRadius: 50,
-              justifyContent:'center',height:responsiveHeight(3.8)
-            }}>
-              <Icon name="shopping-cart" size={responsiveFontSize(1.5)} color={'black'} />
-            </TouchableOpacity>
-   <TouchableOpacity style={{
-              backgroundColor:'white',
-              padding: responsiveWidth(2),
-              borderRadius: 50,
-              justifyContent:'center',height:responsiveHeight(3.8)
-            }}>
-              <Icon name="heart" size={responsiveFontSize(1.5)} color={'black'} />
-            </TouchableOpacity>
-        </View>
-      </View>
-  
-               </View>
-                  </ImageBackground>
-</TouchableOpacity>
+                    <ImageBackground source={{ uri: 'https://gotoastro.com/front-assets/images/e-Magazine.jpg' }} style={{ gap: responsiveHeight(1), marginVertical: responsiveHeight(2) }}>
 
-                <View style={{ gap: responsiveHeight(1),marginVertical:responsiveHeight(2) }}>
-                <Text style={[style.comoncolor2, { textAlign: 'center', fontSize: responsiveFontSize(2.5), fontWeight: 'bold' }]}>Puja</Text>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: responsiveWidth(5), paddingVertical: responsiveHeight(3) }}>
+                            <View style={{ width: '50%' }}>
+                                <Text style={[style.white, { textAlign: 'left', fontSize: responsiveFontSize(2.5), fontWeight: 'bold' }]}>Magazine</Text>
+                                <Text style={{ marginTop: responsiveHeight(2), textAlign: 'left', color: 'white', fontWeight: '300', fontSize: responsiveFontSize(1.3), width: '100%' }}>
+                                    Read Astrology, Vastu and Religious Articles, Celebrity Horoscope Analysis, Articles on Festivals, Brief Biographies of Saints, Regular Series etc.
+                                </Text>
+                            </View>
+
+
+                            <View style={{ width: '48%', marginBottom: responsiveHeight(2), position: 'relative' }}>
+                                <Image
+                                    style={{ width: '100%', height: responsiveHeight(25), resizeMode: 'contain' }}
+                                    source={{ uri: 'https://d2vvtb6c5o2opz.cloudfront.net/magazine/1698047887.webp' }}
+                                />
+                                <View style={{
+                                    position: 'absolute',
+                                    bottom: 10,
+                                    left: '45%',
+                                    transform: [{ translateX: -24 }], // Adjust based on icon size
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between',
+                                    width: 48, // Adjust based on icon size and spacing
+                                    gap: 10
+                                }}>
+                                    <TouchableOpacity style={{
+                                        backgroundColor: 'white',
+                                        padding: responsiveWidth(2),
+                                        borderRadius: 50,
+                                        justifyContent: 'center', height: responsiveHeight(3.8)
+                                    }}>
+                                        <Icon name="shopping-cart" size={responsiveFontSize(1.5)} color={'black'} />
+                                    </TouchableOpacity>
+                                    <TouchableOpacity style={{
+                                        backgroundColor: 'white',
+                                        padding: responsiveWidth(2),
+                                        borderRadius: 50,
+                                        justifyContent: 'center', height: responsiveHeight(3.8)
+                                    }}>
+                                        <Icon name="heart" size={responsiveFontSize(1.5)} color={'black'} />
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+
+                        </View>
+                    </ImageBackground>
+                </TouchableOpacity>
+
+                <View style={{ gap: responsiveHeight(1), marginVertical: responsiveHeight(2) }}>
+                    <Text style={[style.comoncolor2, { textAlign: 'center', fontSize: responsiveFontSize(2.5), fontWeight: 'bold' }]}>Puja</Text>
                     <Text style={{ textAlign: 'center', color: 'black', fontWeight: '300', fontSize: responsiveFontSize(1.3), width: '100%' }}>
                         Read Astrology, Vastu and Religious Articles, Celebrity Horoscope Analysis, Articles on Festivals, Brief Biographies of Saints, Regular Series etc.
                     </Text>
 
                     <>
-                    <TouchableOpacity onPress={() => navigation.navigate('Filter',{name:'PUJA'})} style={{
-        backgroundColor: 'white',
-        shadowColor: '#ea871e',
-        width: '48%',
-        borderRadius: 4,
-        shadowOffset: { width: 0, height: 10 },
-        shadowOpacity: 0.3,
-        shadowRadius: 30,
-        elevation: 3,
-        alignItems: 'center',
-        paddingBottom: responsiveHeight(2),
-        gap:responsiveHeight(1.2),marginVertical:responsiveHeight(2)
-      }}>
-        
-        <Image style={{ width: '100%', height: responsiveHeight(13) }} source={{ uri: 'https://d2vvtb6c5o2opz.cloudfront.net/epoojah_categories/1686224744.webp' }} />
-        <Text style={{textAlign:'center', color: 'black', fontWeight: 'bold',fontSize:responsiveFontSize(1.4) }}>Birth Related Sanskar Puja</Text>
-      </TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Filter', { name: 'PUJA' })} style={{
+                            backgroundColor: 'white',
+                            shadowColor: '#ea871e',
+                            width: '48%',
+                            borderRadius: 4,
+                            shadowOffset: { width: 0, height: 10 },
+                            shadowOpacity: 0.3,
+                            shadowRadius: 30,
+                            elevation: 3,
+                            alignItems: 'center',
+                            paddingBottom: responsiveHeight(2),
+                            gap: responsiveHeight(1.2), marginVertical: responsiveHeight(2)
+                        }}>
+
+                            <Image style={{ width: '100%', height: responsiveHeight(13) }} source={{ uri: 'https://d2vvtb6c5o2opz.cloudfront.net/epoojah_categories/1686224744.webp' }} />
+                            <Text style={{ textAlign: 'center', color: 'black', fontWeight: 'bold', fontSize: responsiveFontSize(1.4) }}>Birth Related Sanskar Puja</Text>
+                        </TouchableOpacity>
                     </>
                 </View>
 
@@ -315,14 +315,14 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         paddingVertical: responsiveHeight(1),
         // paddingHorizontal: responsiveWidth(5),
-        alignItems:'center',
+        alignItems: 'center',
         borderRadius: responsiveWidth(2),
         borderWidth: 1,
         borderColor: theme.secondaryColor,
     },
     consultationButtonText: {
         color: "black",
-        fontSize:responsiveFontSize(1.8)
+        fontSize: responsiveFontSize(1.8)
     },
     ganeshaImage: {
         width: responsiveWidth(35),

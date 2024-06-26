@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
-import { Image, ScrollView, Text, Pressable, View, TouchableOpacity } from "react-native";
+import React, { useMemo, useState } from 'react';
+import { Image, ScrollView, Text, Pressable, View, TouchableOpacity, StyleSheet, Modal, TextInput } from "react-native";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconEvilIcons from 'react-native-vector-icons/EvilIcons';
 import { Dropdown } from "react-native-element-dropdown";
 import style from '../../../utils/css/comoncss/style';
-
 import InfoCardTwo from '../../../comon/info/infoCard';
+import { Picker } from '@react-native-picker/picker';
+import RNPickerSelect from 'react-native-picker-select';
+import RadioGroup from 'react-native-radio-buttons-group';
+import AstroReportModal from './AstroReportModal';
 
 export default function ReportDetail() {
+
+    const [selectedRelation, setSelectedRelation] = useState('self');
+
     const [isHoveredDetails, setIsHoveredDetails] = useState(false);
     const [isHoveredMember, setIsHoveredMember] = useState(false);
     const [activeTab, setActiveTab] = useState('Brief Information');
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+
+
+    const toggleModal = () => {
+        setIsModalVisible(!isModalVisible);
+    };
     const tabs = ['Information'];
 
     const data = [
@@ -107,6 +120,7 @@ Our online Free Kundli generating software is efficient, quick, and precise. It 
                             <Pressable
                                 onPressIn={() => setIsHoveredDetails(true)}
                                 onPressOut={() => setIsHoveredDetails(false)}
+                                onPress={toggleModal}
                                 style={({ pressed }) => [
                                     {
                                         paddingVertical: 10,
@@ -169,18 +183,79 @@ Our online Free Kundli generating software is efficient, quick, and precise. It 
                     <InfoCardTwo tabs={tabs} />
 
                     <View style={{ marginVertical: responsiveHeight(1), borderBottomWidth: 1, borderBottomColor: 'grey', paddingBottom: 25, marginHorizontal: responsiveWidth(1) }}>
-                        <Text style={{color:'black',fontWeight:'300',fontSize:responsiveFontSize(1.5)}} >
+                        <Text style={{ color: 'black', fontWeight: '300', fontSize: responsiveFontSize(1.5) }} >
                             {showFullText ? fullText : truncatedText}
                         </Text>
                         <TouchableOpacity onPress={() => setShowFullText(!showFullText)}>
-                            <Text style={[style.comoncolor2,{marginTop: responsiveHeight(1),fontSize:responsiveFontSize(1.6) }]}>
+                            <Text style={[style.comoncolor2, { marginTop: responsiveHeight(1), fontSize: responsiveFontSize(1.6) }]}>
                                 {showFullText ? 'Read Less' : 'Read More'}
                             </Text>
                         </TouchableOpacity>
                     </View>
 
+                    <AstroReportModal isVisible={isModalVisible} toggleModal={toggleModal} />
                 </View>
             </ScrollView>
         </>
     );
 }
+
+
+const styles = StyleSheet.create({
+    modalContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+
+    },
+    modalContent: {
+        backgroundColor: '#ffffff',
+        padding: responsiveHeight(2),
+        borderRadius: 10,
+        alignItems: 'center',
+        elevation: 5,
+        width: "90%"
+    },
+    modalButton: {
+        marginTop: responsiveHeight(2),
+        paddingVertical: responsiveHeight(2),
+        paddingHorizontal: responsiveWidth(2),
+        borderRadius: 4,
+        alignItems: 'center',
+    },
+    formGroup: {
+        width: '100%',
+        marginBottom: responsiveHeight(2),
+    },
+    label: {
+        fontSize: responsiveFontSize(1.8),
+        color: '#333333',
+        marginTop: responsiveHeight(2),
+        marginBottom: responsiveHeight(2),
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: '#dddddd',
+        borderRadius: 5,
+        paddingVertical: responsiveHeight(1.5),
+        paddingHorizontal: responsiveWidth(3),
+        fontSize: responsiveFontSize(1.5),
+        color: '#333333',
+    },
+    pickerContainer: {
+        borderWidth: 1,
+        borderColor: '#ccc',
+        borderRadius: 4,
+    },
+    picker: {
+        borderWidth: 1,
+        borderColor: '#dddddd',
+        borderRadius: 5,
+        paddingVertical: responsiveHeight(1.5),
+        paddingHorizontal: responsiveHeight(2),
+        fontSize: responsiveFontSize(2),
+        color: '#333333',
+    },
+
+});

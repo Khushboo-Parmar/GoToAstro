@@ -15,6 +15,7 @@ import ReportDetail from '../../Pages/common/AstroReport/AstroReport';
 import Blog from '../../Pages/Blog/Blog';
 import BlogDetail from '../../Pages/Blog/Detail/BlogDetail';
 import Home from '../../Pages/Home/Home';
+import ProfileSidebar from '../../Pages/Profile/Profile';
 
 
 
@@ -37,6 +38,7 @@ export default function StackNavigation() {
       <Stack.Screen options={{ headerShown: false }} name="Puja" component={Main} />
       <Stack.Screen options={{ headerShown: false }} name="Blog" component={Blog} />
       <Stack.Screen options={{ headerShown: false }} name="Home" component={Home} />
+      <Stack.Screen options={{ headerShown: false }} name="ProfileSidebar" component={ProfileSidebar} />
 
 
 
