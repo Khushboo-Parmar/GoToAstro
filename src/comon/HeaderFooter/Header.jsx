@@ -14,7 +14,27 @@ export default function Header({top}){
       <Icon color='#78411b' size={16} name="bars"></Icon>
       </TouchableOpacity>
     </View>
-    <TouchableOpacity onPress={()=>{navigation.navigate('ProfileSidebar')}} ><Icon color='#78411b' size={16} name="user"></Icon></TouchableOpacity>
+    <View style={{ alignItems: 'center', gap: responsiveHeight(1) }}>
+            <Icon color='#78411b' size={16} name="user" />
+            <TouchableOpacity style={{ position: 'relative' }}>
+                <Icon color='#78411b' size={18} name="shopping-cart" />
+                <View
+                    style={[style.bgcomoncolor2,{
+                      position: 'absolute',
+                      right: -8,
+                      top: -8,
+                      borderRadius: 8,
+                      width: 16,
+                      height: 16,
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                  }]}
+                >
+                    <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold' }}>1</Text>
+                </View>
+            </TouchableOpacity>
+        </View>
+    
   </View>
   
   <View style={{width:'70%'}}>
